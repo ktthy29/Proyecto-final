@@ -1,45 +1,38 @@
-/* Global styles for clothing sale website */
-@media (max-width: 768px) {
+/* ====== BASE (PC + general) ====== */
+
 body {
   margin: 0;
   font-family: "DM Serif Display", serif;
   background: #f6f6f8;
   color: #222;
-  width: 100%;
 }
-/* Encabezado styles */
+
+/* Header */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: #b0dbb2;
-  color: #000000;
-  padding: 5px 20px;
+  padding: 10px 20px;
+  z-index: 1000;
 }
 
-/*Barra de navegación styles */
 .menu {
   width: 40px;
-  height: 20px;
+  height: auto;
 }
 
 nav {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-left: auto;
-  margin-right: 40px;
-}
-
-.perfil {
-  width: 25px;
-  height: 25px;
 }
 
 nav a {
-  color: #000000;
+  color: black;
   text-decoration: none;
   font-weight: 600;
 }
@@ -48,67 +41,33 @@ nav a:hover {
   color: #0e6c12;
   text-decoration: underline;
 }
-/*Barra de navegación styles */
 
-/* Main content styles */
+.perfil {
+  width: 30px;
+  height: 30px;
+}
+
+/* Para que no se esconda el contenido debajo del header */
+main {
+  padding-top: 80px;
+}
+
+/* Banner */
 .banner {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/*CONTENIDO PRINCIPAL*/
-/*ABRIGOS*/
-.contenido {
-  max-width: 9000px;
-  margin: 20px 20px;
-  padding: 20px;
-}
-.Titulo {
-  margin: 20px 20px;
-}
-.catalogo {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* ====== PRODUCTOS ====== */
 
-.producto {
-  width: 280px;
-  background: white;
-  border-radius: 20px;
-  padding: 18px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-}
-
-.producto img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-button {
-  align-items: left;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(41, 161, 212);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-}
-/*T-SHIRT*/
+.contenido,
 .contenido2 {
-  max-width: 9000px;
-  margin: 20px 20px;
+  margin: 20px;
   padding: 20px;
 }
-.Titulo2 {
-  margin: 20px;
-}
+
+.catalogo,
 .catalogo2 {
   display: flex;
   gap: 20px;
@@ -116,6 +75,7 @@ button {
   flex-wrap: wrap;
 }
 
+.producto,
 .producto2 {
   width: 280px;
   background: white;
@@ -124,6 +84,7 @@ button {
   box-shadow: 0 5px 20px rgba(0,0,0,0.12);
 }
 
+.producto img,
 .producto2 img {
   width: 100%;
   height: 350px;
@@ -131,149 +92,135 @@ button {
   border-radius: 15px;
 }
 
+/* Botones */
 button {
-  align-items: left;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  color: rgb(255, 255, 255);
+  color: white;
   background-color: rgb(41, 161, 212);
-  box-shadow: 0 5px 20px rgb a(0,0,0,0.12);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
 }
 
-/*INTERMEDIO*/
-.Personalizar{
+/* ====== SECCIÓN INTERMEDIA ====== */
+
+.Personalizar,
+.conocenos {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1200px; 
-  margin-left: 100px;
-  margin-right: 100px;
-  padding: 50px 50px 5px 50px;
+  gap: 40px;
+  margin: 40px;
 }
-.columna1{
+
+.columna1,
+.texto {
   max-width: 550px;
-  padding: 0 20px
 }
-p{
-  font-size: larger;
-}
-.columna2 img{
+
+.columna2 img,
+.logo img {
   width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 15px
-  }
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+}
 
-  button {
-  align-items: left;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(41, 161, 212);
-  box-shadow: 0 5px 20px rgb a(0,0,0,0.12);
-}
-/*CONOCENOS*/
-.conocenos{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px; 
-  margin-left: 100px;
-  margin-right: 100px;
-  gap: 50px;
-  padding: 50px 50px 15px 50px;
-
-}
-.texto{
-  max-width: 550px;
-  padding: 0 20px
-}
-p{
-  font-size: larger;
+p {
+  font-size: 18px;
   text-align: justify;
 }
-.logo img{
-  width: 100%;
-  height: 270px;
-  object-fit: cover;
-  border-radius: 15px
+
+/* ====== FOOTER ====== */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #b0dbb2;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
-/* Footer */
-.footer{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:#b0dbb2;
-  padding:20px 40px;
+.logof img {
+  width: 150px;
 }
 
-.logof img{
-  width:170px;
-  height:auto;
-  padding: 10px;
+.derechos {
+  text-align: center;
 }
 
-.derechos{
-  text-align:center;
-  justify-items: center;
-}
-
-.derechos h2{
-  margin-bottom:10px;
-}
-
-.derechos p{
-  margin:5px 0;
-}
-
-.contactos{
-  display:flex;
-  flex-direction:column;
+.contactos {
+  display: flex;
+  flex-direction: column;
   gap: 8px;
-}
-.telefonop, .correo p, h2{
-  margin: 0;
 }
 
 .telefono,
-.correo{
-  display:flex;
-  align-items:center;
-  gap:10px;
+.correo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .telefono img,
-.correo img{
-  width:22px;
-  height:22px;
+.correo img {
+  width: 22px;
+  height: 22px;
 }
 
-.logosc{
-  display:flex;
-  gap:10px;
-  margin-top:10px;
+.logosc {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.logosc img{
-  width:30px;
-  height:30px;
-  transition:.3s;
-  cursor:pointer;
+.logosc img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.logosc img:hover{
-  transform:scale(1.15);
+.logosc img:hover {
+  transform: scale(1.15);
 }
 
-footer h2:hover{
-  color:#0e6c12;
-  text-decoration:underline;
-}
+/* ====== RESPONSIVE (CELULAR) ====== */
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .catalogo,
+  .catalogo2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto,
+  .producto2 {
+    width: 90%;
+  }
+
+  .Personalizar,
+  .conocenos {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
