@@ -1,5 +1,5 @@
 /* Global styles for clothing sale website */
-
+@media (max-width: 768px) {
 body {
   margin: 0;
   font-family: "DM Serif Display", serif;
@@ -275,4 +275,5 @@ p{
 footer h2:hover{
   color:#0e6c12;
   text-decoration:underline;
+}
 }
